@@ -1,0 +1,905 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Fisherman's Finest East Coast Rock Lobster</title>
+		<link rel="icon" type="image/png" href="images/icon.png" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+form .fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+form .field {
+  flex: 1 1 100%;
+}
+
+form .field.half {
+  flex: 1 1 calc(50% - 1.5em);
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #fff;
+  color: #000;
+}
+
+form textarea {
+  resize: vertical;
+}
+form input[type="checkbox"] {
+  appearance: auto;
+  -webkit-appearance: checkbox; /* for Safari */
+  -moz-appearance: checkbox;   
+  width: 10px;
+  height: 10px;
+  zoom: 1.5;
+  margin-right: 0.5em;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  outline: 2px solid white;
+  cursor: pointer;
+}
+
+/* WhatsApp checkbox spacing */
+.field.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+/* Button fixes */
+ul.actions {
+  display: flex;
+  gap: 1em;
+  padding-top: 1em;
+  flex-wrap: wrap;
+}
+
+ul.actions .button {
+  padding: 0.6em 1.2em;
+  font-size: 0.8em;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  //text-transform: uppercase;
+  letter-spacing: normal;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul.actions .button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+ul.actions .button.primary {
+  background-color: #2e7d32;
+}
+
+ul.actions input[type="submit"],
+ul.actions input[type="reset"] {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+ul.actions li {
+  list-style: none;
+}
+	.custom-logo {
+		
+		display: block !important;
+		opacity: 0 !important;
+		z-index: 10 !important;
+	}
+	.custom-logo img {
+		margin-top: 70px;
+		width: 300px !important;
+		height: auto !important;
+		display: block !important;
+	}
+	body.loaded .custom-logo {
+		opacity: 1 !important;
+		transition: opacity 0.8s ease-out !important;
+	}
+	.button {
+		position: relative;
+		background-image: url('images/Crayfish 7.jpg');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding: 12px 24px;
+		color: #fff !important;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+		overflow: hidden;
+		display: inline-block;
+	}
+	.button::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: inherit;
+		z-index: -1;
+		clip-path: inset(0 1px 0 1px);
+	}
+	.button:hover {
+		background-color: rgba(0, 0, 0, 0.2);
+		color: #fff !important;
+	}
+	nav ul li a {
+		position: relative;
+	}
+	.button-wrapper {
+		position: relative;
+		z-index: 25;
+	}
+	.bg-container {
+	width: 100%;
+	overflow: hidden;
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.bg-image {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+	#bg {
+		z-index: 1;
+	}
+.uniform-button {
+  width: 160px; /* You can adjust this value */
+  text-align: center;
+}
+#closeTermsModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  line-height: 40px;
+  width: 160px;
+  padding: 0 1em;
+  border: 1px solid white;
+  background-color: teal;
+  color: white;
+  border-radius: 1px;
+  cursor: pointer;
+  margin: 1.5em auto;
+  text-align: center;
+}
+
+#closeTermsModal:hover {
+  background-color: #1a5e5e;
+}
+/* Reduce margin on checkbox labels */
+.field.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em; /* Reduced from 1em */
+}
+
+/* Add minimal spacing between checkboxes */
+.field.checkbox + .field.checkbox {
+  margin-top: 0.3em; /* Small positive margin to prevent overlap */
+}
+
+/* Ensure WhatsApp checkbox is clickable */
+form input#join_whatsapp,
+form input#join_whatsapp + label {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+}
+
+/* Reduce margin on the newsletter text */
+.field.checkbox p {
+  margin-top: 0.2em; /* Reduced from 0.5em */
+  margin-bottom: 0; 
+}
+.field.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+input[type="checkbox"],
+input[type="checkbox"] + label,
+.field.checkbox label {
+  cursor: pointer;
+}
+/* === Fix for mobile horizontal scroll === */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure images and content don't overflow */
+img,
+.carousel,
+.carousel-image,
+#main,
+#wrapper,
+article,
+section,
+div,
+p {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Add some padding for mobile readability */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  h2.major {
+    font-size: 1.5em;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  h2.major span.break {
+    display: block;
+  }
+}
+@media screen and (max-width: 736px) {
+  .field fieldset {
+    margin: 0;
+    padding: 0;
+    border: none; /* Remove default fieldset border */
+  }
+  .field fieldset legend {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+  .field label.checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin: 0 0 0.4em 0;
+      padding: 0;
+    }
+  .field label.checkbox input[type="checkbox"] {
+      width: 1em;
+      height: 1em;
+      margin: 0;
+      zoom: 1;
+    }
+  }
+@media screen and (max-width: 736px) {
+    .field.checkbox label {
+      display: flex;
+      align-items: center;
+      gap: 0.7em;
+      margin: 0 0 0.4em 0;
+      padding: 0;
+      white-space: normal;
+      line-height: 1.4;
+    }
+    .field.checkbox label input[type="checkbox"] {
+      width: 1em;
+      height: 1em;
+      margin: 0;
+      zoom: 1;
+    }
+    .field.checkbox label a#openTermsModal {
+      white-space: nowrap;
+    }
+  }
+</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<div class="custom-logo"><img src="images/logo.png" alt="Fishermans Finest Logo" /></div>
+						<div class="line-item">
+							<div class="vertical-line line-under-logo"></div>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Fishermans Finest</h1>
+								<p>Indulge in the rich, flavorful meat of our premium East Coast Rock Lobster, South Africa’s ultimate delicacy. Perfect as the star of your next feast.</p>
+							</div>
+						</div>
+						<div class="line-item">
+							<div class="vertical-line line-under-title"></div>
+						</div>
+						<nav>
+							<ul>
+								<li><span class="button-wrapper"><a href="#product">Product</a></span></li>
+								<li><span class="button-wrapper"><a href="#about">About Us</a></span></li>
+								<li><span class="button-wrapper"><a href="#quote">Get Quote</a></span></li>
+								<li><span class="button-wrapper"><a href="#contact">Contact</a></span></li>
+							</ul>
+						</nav>
+					</header>
+				<!-- Main -->
+					<div id="main">
+						<article id="product">
+	<h2 class="major">East Coast Rock <span class="break">Lobster</span></h2>
+	<div class="carousel">
+		<img src="images/Crayfish 1.jpg" alt="Crayfish" class="carousel-image">
+	</div>
+	<p>The East Coast rock lobster (Panulirus homarus) is one of South Africa’s most prized marine species — renowned for its firm texture, naturally sweet flavor, and versatility in fine cuisine. From classic grilled tails with lemon butter to fragrant seafood stews, it stands out on any plate with its rich, clean taste and elegant presentation.</p>
+	<p>What makes this species even more exceptional is its origin story. These lobsters are sustainably hand-caught — entirely unprocessed and in their natural state — by small-scale fishers along the KwaZulu-Natal and Eastern Cape coasts. Their untouched quality ensures maximum freshness and flavor, giving chefs and seafood lovers complete control over preparation and presentation.</p>
+	<p>Available as Live, Whole Frozen, or Tails, our lobsters cater to diverse culinary needs while retaining their premium quality.</p>
+	<p>Using low-impact, selective methods like free diving, these dedicated fishers help preserve delicate reef ecosystems, avoid bycatch, and maintain healthy lobster populations. This artisanal approach stands in stark contrast to industrial fishing and aligns with global efforts toward responsible, community-driven seafood sourcing.</p>
+	<p>Choosing the East Coast rock lobster isn’t just a culinary decision — it’s a commitment to sustainability, social upliftment, and coastal stewardship. Every lobster represents fair work, ethical harvesting, and the celebration of a uniquely South African resource.</p>
+	<a href="#main" class="close"></a>
+	<script>
+  const images = Array.from({ length: 18 }, (_, i) => `images/Crayfish ${i + 1}.jpg`);
+  const carousel = document.querySelector('#product .carousel');
+  let currentImage = 0;
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  function showNextImage() {
+    currentImage = (currentImage + 1) % images.length;
+    const img = document.createElement('img');
+    img.src = images[currentImage];
+    img.alt = 'Crayfish';
+    img.className = 'carousel-image';
+    img.style.opacity = '0';
+    carousel.appendChild(img);
+
+    setTimeout(() => {
+      img.style.opacity = '1';
+      const oldImg = carousel.querySelector('img:not(:last-child)');
+      if (oldImg) {
+        oldImg.style.opacity = '0';
+        setTimeout(() => oldImg.remove(), 1000);
+      }
+    }, 10);
+
+    if (currentImage === images.length - 1) {
+      shuffleArray(images);
+      currentImage = -1;
+    }
+  }
+
+  shuffleArray(images);
+  showNextImage(); // 👈 load first image immediately
+  const interval = setInterval(showNextImage, 5000);
+</script>
+</article>
+						
+						<article id="about">
+							<h2 class="major">About</h2>
+							<p>At Fisherman’s Finest, we believe that the best seafood doesn’t come from massive trawlers or crowded markets — it comes from the hands of dedicated small-scale fishers who know their coast, respect the ocean, and take pride in every catch.</p>
+
+<p>Our mission is simple: to connect these hardworking, often overlooked fishers to buyers who appreciate quality, sustainability, and authenticity. We work directly with registered small-scale fishers along South Africa’s East Coast, helping them get fair value for the world-class rock lobster they bring in using traditional, low-impact harvesting methods like free diving.</p>
+
+<p>By championing these coastal communities, we help protect not just the future of local fishing, but also the unique heritage and knowledge that goes with it. Every lobster that passes through Fisherman’s Finest tells a story — of resilience, craftsmanship, and ethical sourcing.</p>
+
+<p>Whether you're a chef, a wholesaler, or simply someone who cares about where your food comes from, you can count on us to deliver seafood that’s as meaningful as it is delicious.</p>
+						</article>
+<article id="quote">
+  <h2 class="major">Request a Quote</h2>
+  <form action="https://formspree.io/f/xwpbnadn" method="POST">
+    <div class="fields">
+      <div class="field half">
+        <label for="order-name">Name *</label>
+        <input type="text" name="name" id="order-name" required />
+      </div>
+      <div class="field half">
+        <label for="order-email">Email *</label>
+        <input type="email" name="email" id="order-email" required />
+      </div>
+      <div class="field">
+        <label for="order-phone">Phone Number *</label>
+        <input type="tel" name="phone" id="order-phone" required pattern="\d{10}" title="Please enter a 10-digit phone number (numbers only)" />
+      </div>
+      <div class="field">
+        <label for="order-quantity">Quantity (In Kilograms) *</label>
+        <input type="number" name="quantity" id="order-quantity" required min="5" step="0.5" placeholder="5.5" style="color: black !important; -webkit-text-fill-color: black !important; ::-webkit-input-placeholder { color: black !important; } ::-moz-placeholder { color: black !important; } ::placeholder { color: black !important; }" />
+      </div>
+      <div class="field">
+        <fieldset>
+          <legend>Select Product Type * (choose at least one)</legend>
+          <label class="checkbox"><input type="checkbox" name="order_type" value="Live"> Live</label>
+          <label class="checkbox"><input type="checkbox" name="order_type" value="Whole Frozen"> Whole Frozen</label>
+          <label class="checkbox"><input type="checkbox" name="order_type" value="Tails" disabled> Tails (Coming Soon)</label>
+        </fieldset>
+        <p id="order-warning" style="color: grey; display: none; margin-top: 0.5em;">Please select at least one product type.</p>
+      <div class="field checkbox">
+  <label for="terms" style="color: white !important;">
+    <input type="checkbox" name="terms" id="terms" required />
+    I agree to the <a id="openTermsModal" style="color: white !important; cursor: pointer;">Terms and Conditions</a>
+  </label>
+  <p id="terms-warning" style="color: grey; display: none; margin-top: 0.5em;">You must agree to the Terms and Conditions to submit your inquiry.</p>
+</div>
+        <p id="terms-warning" style="color: grey; display: none; margin-top: 0.5em;">You must agree to the Terms and Conditions to submit your inquiry.</p>
+      </div>
+    </div>
+    <!-- Anti-spam honeypot -->
+    <input type="text" name="_gotcha" style="display:none" />
+    <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false" />
+    <p style="color: grey; margin: 1em 0;">Pricing is tailored based on your order specifications and market conditions. A fisherman will promptly contact you to confirm your inquiry and provide a personalized quote.</p>
+    <ul class="actions">
+      <li><input type="submit" value="Submit Inquiry" class="button uniform-button" /></li>
+      <li><input type="reset" value="Reset" class="button uniform-button" /></li>
+    </ul>
+  </form>
+</article>						<article id="contact">
+  <h2 class="major">Contact</h2>
+  <form action="https://formspree.io/f/xwpbnadn" method="POST">
+    <div class="fields">
+      <div class="field half">
+        <label for="name">Name *</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div class="field half">
+        <label for="email">Email *</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" name="phone" id="phone" pattern="\d{10}" title="Please enter a 10-digit phone number (numbers only)" />
+        <p id="phone-warning" style="color: grey; display: none; margin-top: 0.5em;">Please enter your phone number to join the WhatsApp group.</p>
+      </div>
+      <div class="field">
+        <label for="message">Message *</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+      </div>
+      <div class="checkbox-group">
+  <div class="field checkbox">
+    <label for="join_whatsapp" style="color: white !important;">
+      <input type="checkbox" name="join_whatsapp" id="join_whatsapp" value="Yes" />
+      I’d like to join the Fisherman’s Finest WhatsApp group
+    </label>
+  </div>
+  <div class="field checkbox">
+    <label for="newsletter" style="color: white !important;">
+      <input type="checkbox" name="newsletter" id="newsletter" value="Yes" />
+      I’d like to be informed about updates and specials
+    </label>
+    <p style="color: grey; margin-top: 0.5em;">Your information is secure and will not be shared.</p>
+  </div>
+</div>
+
+    <!-- Anti-spam honeypot -->
+    <input type="text" name="_gotcha" style="display:none" />
+    <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false" />
+    <ul class="actions">
+      <li><input type="submit" value="Send Message" class="button uniform-button" /></li>
+      <li><input type="reset" value="Reset" class="button uniform-button" /></li>
+    </ul>
+  </form>
+</article>
+						<article id="elements">
+							<h2 class="major">Elements</h2>
+							<section>
+								<h3 class="major">Text</h3>
+								<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+								This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+								This is <u>underlined</u> and this is <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+								<hr />
+								<h2>Heading Level 2</h2>
+								<h3>Heading Level 3</h3>
+								<h4>Heading Level 4</h4>
+								<h5>Heading Level 5</h5>
+								<h6>Heading Level 6</h6>
+								<hr />
+								<h4>Blockquote</h4>
+								<blockquote>Fringilla nisl. Done accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+								<h4>Preformatted</h4>
+								<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+							</section>
+							<section>
+								<h3 class="major">Lists</h3>
+								<h4>Unordered</h4>
+								<ul>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+								<h4>Alternate</h4>
+								<ul class="alt">
+									<li>Dolor pulvinar etiam.</li>
+									<li>Sagittis adipiscing.</li>
+									<li>Felis enim feugiat.</li>
+								</ul>
+								<h4>Ordered</h4>
+								<ol>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis viverra.</li>
+									<li>Felis enim feugiat.</li>
+									<li>Dolor pulvinar etiam.</li>
+									<li>Etiam vel felis lorem.</li>
+									<li>Felis enim et feugiat.</li>
+								</ol>
+								<h4>Icons</h4>
+								<ul class="icons">
+									
+									<li><a href="https://www.facebook.com/FishermansFinest" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+    									<li><a href="https://www.instagram.com/fishermansfinest" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+								<h4>Actions</h4>
+								<ul class="actions">
+									<li><span class="button-wrapper"><a href="#" class="button primary">Primary</a></span></li>
+									<li><span class="button-wrapper"><a href="#" class="button">Default</a></span></li>
+								</ul>
+								<ul class="actions">
+									<li><span class="button-wrapper"><a href="#" class="button">Default</a></span></li>
+									<li><span class="button-wrapper"><a href="#" class="button small">Small</a></span></li>
+								</ul>
+								<ul class="actions">
+									<li><span class="button-wrapper"><a href="#" class="button primary icon solid fa-download">Icon</a></span></li>
+									<li><span class="button-wrapper"><a href="#" class="button icon solid fa-download">Icon</a></span></li>
+								</ul>
+								<ul class="actions">
+									<li><span class="button-wrapper"><span class="button primary disabled">Disabled</span></span></li>
+									<li><span class="button-wrapper"><span class="button disabled">Disabled</span></span></li>
+								</ul>
+							</section>
+							<section>
+								<h3 class="major">Table</h3>
+								<h4>Default</h4>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Description</th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Item One</td>
+												<td>Ante turpis integer aliquet porttitor.</td>
+												<td>29.99</td>
+											</tr>
+											<tr>
+												<td>Item Two</td>
+												<td>Vis ac commodo adipiscing arcu aliquet.</td>
+												<td>19.99</td>
+											</tr>
+											<tr>
+												<td>Item Three</td>
+												<td>Morbi faucibus arcu accumsan lorem.</td>
+												<td>29.99</td>
+											</tr>
+											<tr>
+												<td>Item Four</td>
+												<td>Vitae integer tempus condimentum.</td>
+												<td>19.99</td>
+											</tr>
+											<tr>
+												<td>Item Five</td>
+												<td>Ante turpis integer aliquet porttitor.</td>
+												<td>29.99</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2"></td>
+												<td>100.00</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<h4>Alternate</h4>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Description</th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Item One</td>
+												<td>Ante turpis integer aliquet porttitor.</td>
+												<td>29.99</td>
+											</tr>
+											<tr>
+												<td>Item Two</td>
+												<td>Vis ac commodo adipiscing arcu aliquet.</td>
+												<td>19.99</td>
+											</tr>
+											<tr>
+												<td>Item Three</td>
+												<td>Morbi faucibus arcu accumsan lorem.</td>
+												<td>29.99</td>
+											</tr>
+											<tr>
+												<td>Item Four</td>
+												<td>Vitae integer tempus condimentum.</td>
+												<td>19.99</td>
+											</tr>
+											<tr>
+												<td>Item Five</td>
+												<td>Ante turpis integer aliquet porttitor.</td>
+												<td>29.99</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2"></td>
+												<td>100.00</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</section>
+							<section>
+								<h3 class="major">Buttons</h3>
+								<ul class="actions">
+									<li><span class="button-wrapper"><a href="#" class="button primary">Primary</a></span></li>
+									<li><span class="button-wrapper"><a href="#" class="button">Default</a></span></li>
+								</ul>
+								<ul class="actions">
+									<li><span class="button-wrapper"><a href="#" class="button">Default</a></span></li>
+									<li><span class="button-wrapper"><a href="#" class="button small">Small</a></span></li>
+								</ul>
+								<ul class="actions">
+									<li><span class="button-wrapper"><a href="#" class="button primary icon solid fa-download">Icon</a></span></li>
+									<li><span class="button-wrapper"><a href="#" class="button icon solid fa-download">Icon</a></span></li>
+								</ul>
+								<ul class="actions">
+									<li><span class="button-wrapper"><span class="button primary disabled">Disabled</span></span></li>
+									<li><span class="button-wrapper"><span class="button disabled">Disabled</span></span></li>
+								</ul>
+							</section>
+							<section>
+								<h3 class="major">Form</h3>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="demo-name">Name</label>
+											<input type="text" name="demo-name" id="demo-name" value="" placeholder="John Doe" />
+										</div>
+										<div class="field half">
+											<label for="demo-email">Email</label>
+											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jdoe@domain.com" />
+										</div>
+										<div class="field">
+											<label for="demo-category">Category</label>
+											<select name="demo-category" id="demo-category">
+												<option value="">-</option>
+												<option value="1">Manufacturing</option>
+												<option value="1">Shipping</option>
+												<option value="1">Administration</option>
+												<option value="1">Human Resources</option>
+											</select>
+										</div>
+										<div class="field half">
+											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+											<label for="demo-priority-low">Low</label>
+										</div>
+										<div class="field half">
+											<input type="radio" id="demo-priority-high" name="demo-priority">
+											<label for="demo-priority-high">High</label>
+										</div>
+										<div class="field half">
+											<input type="checkbox" id="demo-copy" name="demo-copy">
+											<label for="demo-copy">Email me a copy</label>
+										</div>
+										<div class="field half">
+											<input type="checkbox" id="demo-human" name="demo-human" checked>
+											<label for="demo-human">Not a robot</label>
+										</div>
+										<div class="field">
+											<label for="demo-message">Message</label>
+											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><span class="button-wrapper"><input type="submit" value="Send Message" class="primary" /></span></li>
+										<li><span class="button-wrapper"><input type="reset" value="Reset" /></span></li>
+									</ul>
+								</form>
+							</section>
+						</article>
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						 <ul class="icons" style="display: flex; justify-content: center; gap: 1.5em; margin-top: 2em; transform: translateX(-8px);">
+  <li><a href="https://www.facebook.com/FishermansFinest" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+ 
+</ul>
+						<ul class="copyright">
+							<li>© 2024 Fisherman's Finest. All rights reserved.</a>.</li>
+						</ul>
+					</footer>
+			</div>
+		<!-- BG -->
+			<div id="bg"></div>
+		<!-- Overlay BG -->
+			<div class="bg-container">
+  <img src="images/bg.png" alt="Island Border" class="bg-image" />
+</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.querySelector('#contact form');
+  const orderForm = document.querySelector('#quote form');
+  const checkbox = document.getElementById('join_whatsapp');
+  const phoneInput = document.getElementById('phone');
+  const warning = document.getElementById('phone-warning');
+  const orderWarning = document.getElementById('order-warning');
+  const thankYouModal = document.getElementById('thankYouModal');
+  const thankYouOkButton = document.getElementById('thankYouOkButton');
+  const openTermsLink = document.getElementById('openTermsModal');
+  const termsModal = document.getElementById('termsModal');
+  const closeTermsButton = document.getElementById('closeTermsModal');
+
+  contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  warning.style.display = 'none';
+
+  if (checkbox.checked) {
+    if (phoneInput.value.trim() === '') {
+      warning.style.display = 'block';
+      warning.textContent = 'Please enter your phone number to join the WhatsApp group.';
+      phoneInput.focus();
+      phoneInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    if (!/^\d{10}$/.test(phoneInput.value.trim())) {
+      warning.style.display = 'block';
+      warning.textContent = 'Please enter a valid 10-digit phone number (numbers only).';
+      phoneInput.focus();
+      phoneInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+  }
+
+  submitForm(contactForm);
+});
+
+  // Quote Form Submission
+  if (orderForm) {
+    orderForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      orderWarning.style.display = 'none';
+
+      const checkboxes = orderForm.querySelectorAll('input[name="order_type"]:not(:disabled)');
+      const checked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+      if (!checked) {
+        orderWarning.style.display = 'block';
+        return;
+      }
+
+      submitForm(orderForm);
+    });
+  }
+
+  // Shared Form Submission Logic
+  function submitForm(form) {
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        thankYouModal.style.display = 'flex';
+        form.reset();
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(function(error) {
+      alert('Submission failed. Please check your internet and try again.');
+    });
+  }
+
+  // Modal Close
+  thankYouOkButton.addEventListener('click', function () {
+    window.location.href = 'index.html';
+  });
+// ✅ Terms Modal Open & Close
+  openTermsLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    termsModal.style.display = 'flex';
+  });
+
+closeTermsButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  termsModal.style.display = 'none';
+  const quoteSection = document.getElementById('quote');
+  if (quoteSection) {
+    quoteSection.scrollIntoView({ behavior: 'smooth' });
+    window.history.pushState(null, null, '#quote');
+  } else {
+    console.error('Quote section not found');
+  }
+});
+});
+</script>
+<div id="thankYouModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center;">
+  <div style="background-color: teal; padding: 2em; border-radius: 8px; text-align: center; max-width: 90%; border: 4px solid white;">
+    <h2>Thank You for getting in touch with us!</h2>
+    <p>A representative will be in contact with you soon.</p>
+    <button id="thankYouOkButton" style="margin-top: 1em; padding: 0.5em 1em; border: 1px solid white; background-color: teal; color: white; border-radius: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+  Back to Home
+</button>
+  </div>
+
+</div>
+<div id="termsModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center;">
+  <div style="background-color: teal; padding: 2em; border-radius: 8px; text-align: left; max-width: 90%; max-height: 90vh; overflow-y: auto; border: 4px solid white; color: white;">
+    <h2 style="text-align: center;">Terms & Conditions</h2>
+    <p>Fisherman’s Finest operates solely as a marketing and communications platform on behalf of registered small-scale fishing cooperatives in South Africa. We do not directly sell, handle, or deliver any seafood products, including East Coast Rock Lobster.</p>
+    <p>All purchases made through this website are transacted directly with the relevant fishing cooperative. Payments, logistics, and any related arrangements are strictly between the buyer and the cooperative, and not with Fisherman’s Finest.</p>
+    <p>The crayfish offered are sold in an unprocessed state. They have not been purged, cleaned, cooked, or otherwise treated. As such, these products are not ready for consumption upon delivery and require proper handling and preparation by the buyer.</p>
+    <p>By purchasing through this website, you acknowledge and accept that you are responsible for ensuring that all necessary cleaning, processing, and cooking is performed in accordance with accepted food safety practices. Consumption of improperly handled seafood can pose serious health risks.</p>
+    <p>Fisherman’s Finest makes no warranties, representations, or guarantees regarding the quality, safety, or condition of any seafood product after delivery. We are not liable for any injury, illness, loss, or damage resulting from the handling or consumption of any product advertised on this platform.</p>
+    <p>By placing an order, you agree to release and hold harmless Fisherman’s Finest, its representatives, partners, and affiliates from any and all claims, liabilities, damages, or legal actions related to your purchase and consumption of unprocessed seafood products from the cooperative.</p>
+    <p>These Terms and Conditions are governed by the laws of the Republic of South Africa. Any disputes arising from these terms shall be resolved in accordance with South African law.</p>
+    <p>By using this website and completing a purchase, you confirm that you have read, understood, and agreed to these Terms and Conditions in full.</p>
+    <div style="text-align: center;">
+      <button id="closeTermsModal" style="margin-top: 1.5em; padding: 0.5em 1em; border: 1px solid white; background-color: teal; color: white; border-radius: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 40px; line-height: 40px; width: 160px;">Close</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
